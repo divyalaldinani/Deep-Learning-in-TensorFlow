@@ -59,14 +59,14 @@ def plot_loss_curves(history):
     plt.plot(epochs, val_loss, label = 'validation loss')
     plt.title('Loss Curves')
     plt.xlabel('Epochs')
-    plt.legends()
+    # plt.legends()
     plt.show()
 
     plt.plot(epochs, accuracy, label = 'Training accuracy')
     plt.plot(epochs, val_accuracy, label = 'Validation accuracy')
     plt.title('Accuracy curves')
     plt.xlabel('Epochs')
-    plt.legends()
+    # plt.legends()
     plt.show()
 
 import zipfile
