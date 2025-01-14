@@ -89,7 +89,7 @@ def walk_through_directory(dir_path):
 import random
 def view_random_image(class_names, directory):
     target_class = random.choice(class_names)
-    target_dir = directory + '/' + taregt_class
+    target_dir = directory + '/' + target_class
     random_image = random.choice(os.listdir(target_dir))
     random_image_path = target_dir + '/' + random_image
     img = mpimg.imread(random_image_path)
