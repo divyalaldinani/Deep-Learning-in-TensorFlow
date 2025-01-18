@@ -111,7 +111,7 @@ def view_random_image_and_augmented(class_names, directory, data_augmentation):
     plt.figure()
     augmented_image = tf.cast(tf.squeeze(augmented_image), dtype=tf.uint8)
     plt.imshow(augmented_image)
-    plt.title('Augmented Image from class: {target_class}')
+    plt.title(f"Augmented Image from class: {target_class}")
     # plt.title(f"Augme")
     plt.axis('Off')
 
