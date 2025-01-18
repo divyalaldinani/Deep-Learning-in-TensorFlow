@@ -97,3 +97,21 @@ def view_random_image(class_names, directory):
     plt.title(f"Original class: {target_class}")
     plt.axis(False)
 
+
+def view_random_image_and_augmented(class_names, directory, data_augmentation):
+    target_class = random.choice(class_names)
+    target_dir = directory + '/' + target_class
+    random_image = random.choice(os.listdir(target_dir))
+    random_image_path = target_dir + '/' + random_image
+    img = mpimg.imread(random_image_path)
+    plt.imshow(img)
+    plt.title(f"Original class: {target_class}")
+    plt.axis(False)
+    augmented_image = data_augmentation(tf.expand_dims(img, axis=0))
+    plt.figure()
+    augmented_image = tf.cast(tf.squeeze(augmented_image), dtype=tf.uint8)
+    plt.imshow(augmented_image)
+    plt.title('Augmented Image from class: {target_class}')
+    # plt.title(f"Augme")
+    plt.axis('Off')
+
